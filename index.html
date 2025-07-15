@@ -23,625 +23,348 @@
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="chatbot.css">
 
-
-
 <style>
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+  /*======================================
+  //--//-->   ABOUT
+  ======================================*/
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+  .about-mf .box-shadow-full {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+  .about-mf .about-img {
+    margin-bottom: 2rem;
+  }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
+  .about-mf .about-img img {
+    margin-left: 10px;
+  }
 
+  .skill-mf .progress {
+    /* background-color: #cde1f8; */
+    margin: .5rem 0 1.2rem 0;
+    border-radius: 0;
+    height: .7rem;
+  }
 
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
+  .skill-mf .progress .progress-bar {
+    height: .7rem;
+    background-color: #ffbd39;
+  }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
+  /* Animation styles */
+  #typing-animation {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(20, end) infinite;
+  }
 
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
+  #typing-animation:before {
+    content: "";
+    /* position: absolute; */
+    top: 0;
+    left: 0;
     width: 0;
+    height: 100%;
+    background-color: #ccc;
+    animation: typing-cursor 0.5s ease-in-out infinite;
   }
-  to {
-    width: 100%;
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
-}
 
-@keyframes typing-cursor {
-  from {
-    width: 5px;
+  @keyframes typing-cursor {
+    from {
+      width: 5px;
+    }
+    to {
+      width: 0;
+    }
   }
-  to {
-    width: 0;
+
+  /* project image zoom effect */
+
+  .zoom-effect {
+    overflow: hidden;
+    transition: transform 0.3s ease-out;
   }
-}
 
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
+  .zoom-effect:hover {
+    transform: scale(1.1);
+  }
 
 </style>
 
-
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Akshat Arora</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Akshat Arora</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_112.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Akshat Arora</span></h1>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+            <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="home-section" class="hero">
+      <div class="home-slider  owl-carousel">
+        <div class="slider-item ">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_112.png);">
+                <div class="overlay"></div>
+              </div>
+              <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm <span>Akshat Arora</span></h1>
+                  <span id="typing-animation"></span>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+                  <script>
+                    const typingAnimationElement = document.getElementById('typing-animation');
+                    const typingTexts = [
+                      'Software Developer',
+                      'B.Tech Student',
+                      'SDE Intern',
+                      'Tech Enthusiast',
+                      'Problem Solver',
+                    ];
 
-						<script>
+                    function playTypingAnimation(text) {
+                      for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => {
+                          typingAnimationElement.textContent += text[i];
+                        }, i * 200);
+                      }
 
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
+                      setTimeout(() => {
+                        typingAnimationElement.textContent = '';
+                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                      }, text.length * 200);
+                    }
 
-						// Create an array of typing text
-						const typingTexts = [
-  'Software Developer',
-  'B.Tech Student',
-  'SDE Intern',
-  'Tech Enthusiast',
-  'Problem Solver',
-];
+                    playTypingAnimation(typingTexts[0]);
+                  </script>
 
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-						<h2>An Aspiring Software Engineer</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/akshat-arora-623796191/" class="btn btn-primary py-3 px-4">Linkedin</a> 
-							<a href="https://github.com/AKSHAT-ARORA03" class="btn btn-white btn-outline-white py-3 px-4">Github</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
+                  <h2>An Aspiring Software Engineer</h2>
+                  <p><a href="https://www.linkedin.com/in/akshat-arora-623796191/" class="btn btn-primary py-3 px-4">Linkedin</a> 
+                      <a href="https://github.com/AKSHAT-ARORA03" class="btn btn-white btn-outline-white py-3 px-4">Github</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-
 
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me1.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Akshat Arora</span></p>
-										<p><span class="title-s">Job Role: </span> <span>SDE Intern</span></p>
-										<p><span class="title-s">Experience: </span> <span>Fresher</span></p>
-										<p><span class="title-s">Address: </span> <span>Chennai, India</span></p>
-									  </div>
-									</div>
-								  </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-5 d-flex">
+            <div class="img-about img d-flex align-items-stretch">
+              <div class="overlay">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="images/about-me1.png" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p><span class="title-s">Name: </span> <span>Akshat Arora</span></p>
+                      <p><span class="title-s">Job Role: </span> <span>SDE Intern</span></p>
+                      <p><span class="title-s">Experience: </span> <span>Fresher</span></p>
+                      <p><span class="title-s">Address: </span> <span>Chennai, India</span></p>
+                    </div>
+                  </div>
+                </div>
 
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>C++</span> <span class="pull-right">75%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>DSA</span> <span class="pull-right">50%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>HTML/CSS/JS</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>MERN</span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Machine Learning</span> <span class="pull-right">60%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
+                <div class="skill-mf">
+                  <p class="title-s">Skills</p>
+                  <span>C++</span> <span class="pull-right">75%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  
+                  <span>DSA</span> <span class="pull-right">50%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  
+                  <span>HTML/CSS/JS</span> <span class="pull-right">85%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  
+                  <span>MERN</span> <span class="pull-right">70%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  
+                  <span>Machine Learning</span> <span class="pull-right">60%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
 
-									<span>SQL</span> <span class="pull-right">50%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>Hi, I'm Akshat Arora, a passionate B.Tech student specializing in CSE with specs in AI & Robotics with a keen interest in software development and problem-solving. Currently, I'm working as an SDE Intern, where I sharpen my skills in building scalable and efficient solutions.
+                  <span>SQL</span> <span class="pull-right">50%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+            <div class="row justify-content-start pb-3">
+              <div class="col-md-12 heading-section ftco-animate">
+                  
+                <h1 class="big">About</h1>
+                <h2 class="mb-4">About Me</h2>
+                
+                <p>Hi, I'm Akshat Arora, a passionate B.Tech student specializing in CSE with specs in AI & Robotics with a keen interest in software development and problem-solving. Currently, I'm working as an SDE Intern, where I sharpen my skills in building scalable and efficient solutions.
 
-									I thrive on learning new technologies and applying them to real-world challenges. My journey is fueled by curiosity and a desire to create meaningful impact through technology.
-									
-									When I'm not coding, I enjoy watching Current Affairs , Exploring Emerging Technologies. Let's connect and build something amazing together!</p>
-									<ul class="about-info mt-4 px-md-0 px-2">
-										<li class="d-flex"><span>Profile:</span> <span>Software Development &amp; Engineering</span></li>
-										<li class="d-flex"><span>Domain:</span> <span>Web Development, Cloud Computing, Machine Learning</span></li>
-										<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology (B.Tech)</span></li>
-										<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-										<li class="d-flex"><span>Technologies:</span> <span>JavaScript, React, Node.js, Python, AWS, Git</span></li>
-										<li class="d-flex"><span>Other Skills:</span> <span>Problem Solving, Agile Development, GitHub</span></li>
-										<li class="d-flex"><span>Interest:</span> <span>Open-Source Contribution, Hackathons, Competitive Coding</span></li>
-									</ul>
-									
-							</div>
-						</div>
+                  I thrive on learning new technologies and applying them to real-world challenges. My journey is fueled by curiosity and a desire to create meaningful impact through technology.
+                  
+                  When I'm not coding, I enjoy watching Current Affairs , Exploring Emerging Technologies. Let's connect and build something amazing together!</p>
+                  <ul class="about-info mt-4 px-md-0 px-2">
+                    <li class="d-flex"><span>Profile:</span> <span>Software Development &amp; Engineering</span></li>
+                    <li class="d-flex"><span>Domain:</span> <span>Web Development, Cloud Computing, Machine Learning</span></li>
+                    <li class="d-flex"><span>Education:</span> <span>Bachelor of Technology (B.Tech)</span></li>
+                    <li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+                    <li class="d-flex"><span>Technologies:</span> <span>JavaScript, React, Node.js, Python, AWS, Git</span></li>
+                    <li class="d-flex"><span>Other Skills:</span> <span>Problem Solving, Agile Development, GitHub</span></li>
+                    <li class="d-flex"><span>Interest:</span> <span>Open-Source Contribution, Hackathons, Competitive Coding</span></li>
+                  </ul>
+                
+              </div>
+            </div>
 
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="5">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p class="mb-4">
-									<span class="number" data-number="3">0</span> <span>+</span>
-									<span>&nbsp;Currently Working Projects</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/akshat-arora-623796191/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+            <div class="counter-wrap ftco-animate d-flex mt-md-3">
+              <div class="text">
+                <p class="mb-4">
+                  <span class="number" data-number="5">0</span> <span>+</span>
+                  <span>&nbsp; Projects completed</span>
+                </p>
+                <p class="mb-4">
+                  <span class="number" data-number="3">0</span> <span>+</span>
+                  <span>&nbsp;Currently Working Projects</span>
+                </p>
+                <p><a href="https://www.linkedin.com/in/akshat-arora-623796191/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-
-
-	
     <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
+            <h1 class="big big-2">Resume</h1>
             <h2 class="mb-4">Resume</h2>
             <p>Enthusiastic Software Engineering student with hands-on experience in developing software applications and systems. Skilled in programming languages, data structures, algorithms, and building dynamic web applications. Currently seeking opportunities to apply my knowledge and skills as a Software Development Engineer Intern.</p>
           </div>
         </div>
 
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-	
-		
-		<div class="row">
-			<div class="col-md-6">
-				<div class="resume-wrap ftco-animate">
-					<span class="date">Aug 24-Nov 24</span>
-					<h2>Software Development Engineer Intern</h2>
-					<span class="position">Zidio Development Pvt Ltd</span>
-					<p class="mt-4">
-						Zidio Development Pvt Ltd, a fast-growing software solutions provider.
-						<ul>
-							<li>Worked on full-stack development, building and maintaining dynamic web applications.</li>
-							<li>Collaborated with cross-functional teams to implement features and ensure high-quality code through code reviews and testing.</li>
-							<li>Utilized frameworks like React and Node.js to develop robust and scalable applications.</li>
-						</ul>
-					</p>
-					<!-- Button to show offer letter -->
-					<a href="images/zidio offer letter.pdf" target="_blank" class="btn btn-primary">View Offer Letter</a>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="resume-wrap ftco-animate">
-					<span class="date">Nov 24-Present</span>
-					<h2>AI/ML Intern</h2>
-					<span class="position">Spectov</span>
-					<p class="mt-4">
-						Spectov, a company focused on providing AI-powered solutions to optimize business processes.
-						<ul>
-							<li>Worked on machine learning models for data classification, clustering, and prediction tasks.</li>
-							<li>Designed and implemented AI solutions to improve business efficiency, resulting in a 15% increase in operational performance.</li>
-							<li>Utilized Python, TensorFlow, and scikit-learn to build and deploy models for real-time applications.</li>
-						</ul>
-					</p>
-					<!-- Button to show certificate of completion -->
-					<a href="images/spectov offer letter.pdf" target="_blank" class="btn btn-primary">View Offer Letter</a>
-				</div>
-			</div>
-		</div>
-		
-		
-		
-		<br>
-		<br>
+        <div class="row">
+          <h1 class="big-4">Experience</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
 
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2022-2026</span>
-    					<h2>Bachelor of Engineering</h2>
-    					<span class="position">Vellore Institute of Technology</span>
-    				
-    				</div>
-    			</div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Apr 25 – Present</span>
+              <h2>Software Developer Intern</h2>
+              <span class="position">Revino Solutions Pvt. Ltd.</span>
+              <p class="mt-4">
+                Revino Solutions, a cutting-edge AI-first technology company. 
+                <ul>
+                  <li>Worked on building loyalty automation systems and customer engagement solutions using AI.</li>
+                  <li>Developed new features for the SaaS platform using the MERN stack.</li>
+                </ul>
+              </p>
+              <a href="https://drive.google.com/file/d/1ptELIGKDIdHbGIWzWIFjkYyIYHOfuMWH/view?usp=sharing" target="_blank" class="btn btn-primary">View Resume</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Aug 24-Nov 24</span>
+              <h2>Software Development Engineer Intern</h2>
+              <span class="position">Zidio Development Pvt. Ltd.</span>
+              <p class="mt-4">
+                Zidio Development Pvt Ltd, a fast-growing software solutions provider.
+                <ul>
+                  <li>Worked on full-stack development, building and maintaining dynamic web applications.</li>
+                  <li>Collaborated with cross-functional teams to implement features and ensure high-quality code through code reviews and testing.</li>
+                </ul>
+              </p>
+              <a href="images/zidio offer letter.pdf" target="_blank" class="btn btn-primary">View Offer Letter</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <h1 class="big-4">Education</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
 
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2020-2022</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">B.L. Memorial Senior Secondary School</span>
-    		
-    				</div>
-				</div>
-				<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2019-2020</span>
-    					<h2>Secondary School</h2>
-    					<span class="position">Good Shephered Public School</span>
-    		
-    				</div>
-				</div>
-    		</div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2022-2026</span>
+              <h2>Bachelor of Engineering</h2>
+              <span class="position">Vellore Institute of Technology</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2020-2022</span>
+              <h2>Higher Secondary School</h2>
+              <span class="position">B.L. Memorial Senior Secondary School</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2019-2020</span>
+              <h2>Secondary School</h2>
+              <span class="position">Good Shepherd Public School</span>
+            </div>
+          </div>
+        </div>
 
-    		<div class="row justify-content-center mt-5">
-				<div class="col-md-6 text-center ftco-animate">
-					<p><a href="https://drive.google.com/file/d/1mL2DplG7ZGAyfu5z0l99zO7dH3wNWlGm/view?usp=drive_link" class="btn btn-primary py-4 px-5" target="_blank">Download Resume</a></p>
-				</div>
-			</div>			
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 text-center ftco-animate">
+            <p><a href="https://drive.google.com/file/d/1ptELIGKDIdHbGIWzWIFjkYyIYHOfuMWH/view?usp=sharing" class="btn btn-primary py-4 px-5" target="_blank">Download Resume</a></p>
+          </div>
+        </div>			
+      </div>
     </section>
 
-   
-
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the some Web Development, Machine Learning Projects and Research Paper.</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-				<a href="https://github.com/AKSHAT-ARORA03/DriveWise" class="block-20 zoom-effect" style="background-image: url('images/AProj_1.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-				</a>
-				
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/AKSHAT-ARORA03/DriveWise">Drivewise using MERN</a></h3>
-                <p>Drivewise is a transformative solution aimed at optimizing the registration process for driving schools. By digitizing and automating key workflows, it enhances user experience and streamlines operations for both students and instructors..</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/AKSHAT-ARORA03/Transfer-Learning-in-Face-Recognition-" class="block-20 zoom-effect" style="background-image: url('images/AProj_2.jpeg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/AKSHAT-ARORA03/Transfer-Learning-in-Face-Recognition-">Transfer Learning in Face Recognition
-				</a></h3>
-                <p>Research Paper on Transfer Learning in Face Recognition: Optimizing Deep Learning Models for Efficient and Accurate Identification.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/AKSHAT-ARORA03/Non-Hindi-Language-Model-using-VITS" class="block-20 zoom-effect" style="background-image: url('images/Aproj_3.jpeg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/AKSHAT-ARORA03/Non-Hindi-Language-Model-using-VITS">Non Hindi Language model using VITS(Text-to-speech)</a></h3>
-                <p>The Non-Hindi Language Model using VITS (Text-to-Speech) converts text into natural-sounding speech in languages other than Hindi. It leverages Variational Inference Text-to-Speech (VITS) technology to produce high-quality, expressive speech synthesis in various languages.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/AKSHAT-ARORA03/Job-Portal-System" class="block-20 zoom-effect" style="background-image: url('images/Aproj-4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/AKSHAT-ARORA03/Job-Portal-System">JobNestify-Job Portal using MERN</a></h3>
-				  <p>The Job Portal built using the MERN stack (MongoDB, Express.js, React, Node.js) allows users to search, apply, and manage job listings seamlessly. It provides a dynamic and responsive platform for both job seekers and employers to connect efficiently.</p>
-				</div>
-			  </div>
-			</div>
-		 </div>
-	  </div>
-    </section>
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="z-index: 2;">
-		<div class="container">
-		  <div class="row d-md-flex align-items-center">
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <strong class="number" data-number="5">0</strong>
-				  <span>Academic Projects</span>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <strong class="number" data-number="2">0</strong>
-				  <span>Internships</span>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <strong class="number" data-number="50">0</strong>
-				  <span>Code Commits</span>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-			  <div class="block-18">
-				<div class="text">
-				  <strong class="number" data-number="30">0</strong>
-				  <span>Cups of Coffee</span>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </section>
-
-	  <section>
-		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url('images/bg_1.jpg'); position: relative; z-index: -1;">
-			<h2 class="text-center" style="position: relative; z-index: 1;">More projects on <span>GitHub</span></h2>
-			<div class="row justify-content-center mt-5" style="position: relative; z-index: 1;">
-				<div class="col-md-6 text-center ftco-animate">
-					<p><a href="https://github.com/AKSHAT-ARORA03" class="btn btn-primary py-3 px-4" target="_blank" style="z-index: 2;">GitHub</a></p>
-				</div>
-			</div>
-		</div>
-		
-	  </section>
-	  
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
-        </div>
-
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Chennai, India</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:akshatarora1299@gmail.com">akshatarora1299@gmail.com</a></p>
-	          </div>
-          </div>
-		  <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-			<div class="align-self-stretch box p-4 text-center">
-			  <div class="icon d-flex align-items-center justify-content-center">
-				<span class="icon-instagram"></span>
-			  </div>
-			  <h3 class="mb-4">Instagram</h3>
-			  <p><a href="https://www.instagram.com/akshat_arora_2004" target="_blank">Akshat Arora</a></p>
-			</div>
-		  </div>
-		  
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/1mL2DplG7ZGAyfu5z0l99zO7dH3wNWlGm/view">Resume Link</a></p>
-	          </div>
-          </div>
-
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/mu786LgiA1mdxhiv7" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.youtube.com/@AKSHATARORA-nk8zl"><span class="icon-youtube"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/akshat-arora-623796191/"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://x.com/AKSHATA66232015"><span class="icon-twitter"></span></a></li>
-					  <li class="ftco-animate"><a href="https://x.com/AKSHATA66232015"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/akshat_arora_2004/"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>  
- 
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
-
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="js/chatbot.js"></script>
-  <script src="js/main.js"></script>
-    
   </body>
 </html>
